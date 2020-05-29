@@ -9,6 +9,8 @@ class NetworkTools: AFHTTPSessionManager {
     
     public let redirectUrl = "https://www.baidu.com"
     
+    typealias HMRequsetCallBack = (AnyObject?,Error?)->()
+    
     var OAuthURL:NSURL{
         let url = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUrl)"
         return NSURL(string:url)!
@@ -17,6 +19,7 @@ class NetworkTools: AFHTTPSessionManager {
     static let sharedTools:NetworkTools = {
         let tools =  NetworkTools(baseURL: nil)
         tools.responseSerializer.acceptableContentTypes?.insert("text/html")
+        tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
         return tools
     }()
 
@@ -32,6 +35,12 @@ extension NetworkTools{
         if method == .POST{
             post(URLString, parameters: parameters, progress: nil, success: {(_,result) in print(result!)}){(_,error) in finish (nil,error)}
         }
+    }
+    
+    func loadAccessToken(code:String,finished:@escaping HMRequsetCallBack){
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        let params = ["client_id" : appKey,"client_secret" : appSecre,"grant_type" : "authorization_code","code" : code,"redirect_uri" : redirectUrl]
+        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finish: finished)
     }
 
 }

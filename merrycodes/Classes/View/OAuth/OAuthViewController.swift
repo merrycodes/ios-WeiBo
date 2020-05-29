@@ -20,7 +20,7 @@ class OAuthViewController: UIViewController {
     
     @objc public func autoFill(){
         var js = "document.getElementById('userId').value='13542285068';"
-        js+="document.getElementById('passwd').value='lutao.158';"
+        js+="document.getElementById('passwd').value='';"
         webView.stringByEvaluatingJavaScript(from: js)
     }
     
@@ -36,7 +36,14 @@ extension OAuthViewController:UIWebViewDelegate{
             return false
         }
         let code = String(query["code=".endIndex...])
-        print(code)
+        NetworkTools.sharedTools.loadAccessToken(code: code){
+            (result,error)->() in
+            if error != nil{
+                print("出错了")
+                return
+            }
+            print(result!)
+        }
         return false
     }
     
