@@ -26,21 +26,29 @@ class NetworkTools: AFHTTPSessionManager {
 }
 extension NetworkTools{
 
-    func request(method:HMRequestMethod, URLString:String, parameters:[String:AnyObject]?, finish:@escaping (_ result:AnyObject?,_ error:Error?)->()) {
+    func request(method:HMRequestMethod, URLString:String, parameters:[String:AnyObject]?, finished:@escaping HMRequsetCallBack) {
 
+        let success = {
+            (task:URLSessionDataTask?,result:Any?)->Void in finished(result as AnyObject?,nil)
+        }
+        
+        let failure = {
+            (task:URLSessionDataTask?,error:Error)->Void in finished(nil,error)
+        }
+        
         if method == .GET{
-            get(URLString, parameters: parameters, progress: nil, success: {(_,result) in print(result!)}){(_,error) in finish (nil,error)}
+            get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
         }
 
         if method == .POST{
-            post(URLString, parameters: parameters, progress: nil, success: {(_,result) in print(result!)}){(_,error) in finish (nil,error)}
+            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
         }
     }
     
     func loadAccessToken(code:String,finished:@escaping HMRequsetCallBack){
         let urlString = "https://api.weibo.com/oauth2/access_token"
         let params = ["client_id" : appKey,"client_secret" : appSecre,"grant_type" : "authorization_code","code" : code,"redirect_uri" : redirectUrl]
-        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finish: finished)
+        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
 
 }

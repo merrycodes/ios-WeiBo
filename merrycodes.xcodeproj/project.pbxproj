@@ -17,6 +17,7 @@
 		7E040143242DD7DD00A11E79 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E040142242DD7DD00A11E79 /* VisitorView.swift */; };
 		7E5ACBD7246B85FF000E9EC0 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ACBD6246B85FF000E9EC0 /* NetworkTools.swift */; };
 		7E5ACBDA246E8DA8000E9EC0 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ACBD9246E8DA8000E9EC0 /* OAuthViewController.swift */; };
+		7E5ACBDC248126E1000E9EC0 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ACBDB248126E1000E9EC0 /* UserAccount.swift */; };
 		7ED92B7B241B6CB200FD0C75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED92B7A241B6CB200FD0C75 /* AppDelegate.swift */; };
 		7ED92B7D241B6CB200FD0C75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED92B7C241B6CB200FD0C75 /* ViewController.swift */; };
 		7ED92B80241B6CB200FD0C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED92B7E241B6CB200FD0C75 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		7E040142242DD7DD00A11E79 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7E5ACBD6246B85FF000E9EC0 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		7E5ACBD9246E8DA8000E9EC0 /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		7E5ACBDB248126E1000E9EC0 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		7ED92B77241B6CB200FD0C75 /* merrycodes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = merrycodes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED92B7A241B6CB200FD0C75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ED92B7C241B6CB200FD0C75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		7E0401292421AA3A00A11E79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E5ACBDB248126E1000E9EC0 /* UserAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				7E0401332421AB4B00A11E79 /* MainTabBarController.swift in Sources */,
 				7E04013E2424A5A900A11E79 /* UiButtonExtension .swift in Sources */,
 				7E5ACBDA246E8DA8000E9EC0 /* OAuthViewController.swift in Sources */,
+				7E5ACBDC248126E1000E9EC0 /* UserAccount.swift in Sources */,
 				7E040143242DD7DD00A11E79 /* VisitorView.swift in Sources */,
 				7ED92B7D241B6CB200FD0C75 /* ViewController.swift in Sources */,
 				7E0401352421ABD100A11E79 /* DiscoverTableViewController.swift in Sources */,

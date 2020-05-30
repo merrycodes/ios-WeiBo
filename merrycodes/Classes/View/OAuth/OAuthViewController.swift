@@ -42,7 +42,10 @@ extension OAuthViewController:UIWebViewDelegate{
                 print("出错了")
                 return
             }
-            print(result!)
+            print("这是报错的前面一行")
+            let account = UserAccount(dict: result as! [String:AnyObject])
+            print(account)
+            
         }
         return false
     }

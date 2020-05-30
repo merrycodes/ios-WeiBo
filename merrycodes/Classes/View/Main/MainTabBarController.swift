@@ -6,9 +6,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addChildViewControllers()
-//        NetworkTools.sharedTools.request(URLString: "http://www.weather.com.cn/data/sk/101010100.html", parameters: nil)
-        NetworkTools.sharedTools.request(method: .GET, URLString: "http://httpbin.org/get", parameters: ["name" : "zhangsan" as AnyObject,"age" : 18 as AnyObject], finish: {(result,error)->() in print(error!)})
-         NetworkTools.sharedTools.request(method: .POST, URLString: "http://httpbin.org/post", parameters: ["name" : "zhangsan" as AnyObject,"age" : 18 as AnyObject], finish: {(result,error)->() in print(error!)})
     }
 
     override func didReceiveMemoryWarning() {
