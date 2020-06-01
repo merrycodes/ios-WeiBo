@@ -19,7 +19,7 @@ class OAuthViewController: UIViewController {
     }
     
     @objc public func autoFill(){
-        var js = "document.getElementById('userId').value='13542285068';"
+        var js = "document.getElementById('userId').value='';"
         js+="document.getElementById('passwd').value='';"
         webView.stringByEvaluatingJavaScript(from: js)
     }
@@ -42,7 +42,6 @@ extension OAuthViewController:UIWebViewDelegate{
                 print("出错了")
                 return
             }
-            print("这是报错的前面一行")
             let account = UserAccount(dict: result as! [String:AnyObject])
             print(account)
             
