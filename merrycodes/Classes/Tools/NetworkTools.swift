@@ -50,6 +50,12 @@ extension NetworkTools{
         let params = ["client_id" : appKey,"client_secret" : appSecre,"grant_type" : "authorization_code","code" : code,"redirect_uri" : redirectUrl]
         request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
+    
+    func loadUserInfo(uid:String,accessToken:String,finished:@escaping HMRequsetCallBack){
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        let params = ["uid" : uid,"access_token" : accessToken]
+        request(method: .GET, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
+    }
 
 }
 
