@@ -11,6 +11,13 @@ class NetworkTools: AFHTTPSessionManager {
     
     typealias HMRequsetCallBack = (AnyObject?,Error?)->()
     
+    public var accessToken:[String:AnyObject]? {
+        if let token = UserAccountViewModel.sharedUserAccount.account?.access_token {
+            return ["access_token":token as AnyObject]
+        }
+        return nil
+    }
+    
     var OAuthURL:NSURL{
         let url = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUrl)"
         return NSURL(string:url)!
@@ -50,10 +57,14 @@ extension NetworkTools{
         let params = ["client_id" : appKey,"client_secret" : appSecre,"grant_type" : "authorization_code","code" : code,"redirect_uri" : redirectUrl]
         request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
-    
-    func loadUserInfo(uid:String,accessToken:String,finished:@escaping HMRequsetCallBack){
+        
+    func loadUserInfo(uid:String,finished:@escaping HMRequsetCallBack){
+        guard var params = accessToken else {
+            finished(nil,NSError(domain: "error", code: -1001, userInfo: ["message":"token为空"]))
+            return
+        }
         let urlString = "https://api.weibo.com/2/users/show.json"
-        let params = ["uid" : uid,"access_token" : accessToken]
+        params["uid"] = uid as AnyObject?
         request(method: .GET, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
 

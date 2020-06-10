@@ -3,7 +3,9 @@ import UIKit
 
 class VisitorTableViewController: UITableViewController {
     
-    public var userLogin = false
+    public var userLogin = UserAccountViewModel.sharedUserAccount.userLogin
+    
+//    public var userLogin = false
     
     public var visitorView : VisitorView?
     

@@ -1,6 +1,6 @@
 import UIKit
 
-class UserAccount: NSObject {
+class UserAccount: NSObject, NSCoding{
     
     @objc var access_token:String?
     
@@ -33,6 +33,27 @@ class UserAccount: NSObject {
         return dictionaryWithValues(forKeys: keys).description
     }
 
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(access_token, forKey: "access_token")
+        aCoder.encode(uid, forKey: "uid")
+        aCoder.encode(expiresDate, forKey: "expiresDate")
+        aCoder.encode(screen_name, forKey: "screen_name")
+        aCoder.encode(avatar_large, forKey: "avatar_large")
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        access_token = aDecoder.decodeObject(forKey: "access_token") as! String?
+        uid = aDecoder.decodeObject(forKey: "uid") as! String?
+        expiresDate = aDecoder.decodeObject(forKey: "expiresDate") as! NSDate?
+        screen_name = aDecoder.decodeObject(forKey: "screen_name") as! String?
+        avatar_large = aDecoder.decodeObject(forKey: "avatar_large") as! String?
+    }
+    
+    func saveUserAccount() {
+        var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
+        path = (path as NSString).strings(byAppendingPaths: ["account.plist"]).last!
+        print("path:" + path)
+        NSKeyedArchiver.archiveRootObject(self, toFile: path)
+    }
 
 }
