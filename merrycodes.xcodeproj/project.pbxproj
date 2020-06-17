@@ -12,7 +12,7 @@
 		7E0401372421ABF500A11E79 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0401362421ABF500A11E79 /* HomeTableViewController.swift */; };
 		7E0401392421AC0400A11E79 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0401382421AC0400A11E79 /* MessageTableViewController.swift */; };
 		7E04013B2421AC1800A11E79 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04013A2421AC1800A11E79 /* ProfileTableViewController.swift */; };
-		7E04013E2424A5A900A11E79 /* UiButtonExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04013D2424A5A900A11E79 /* UiButtonExtension .swift */; };
+		7E04013E2424A5A900A11E79 /* UIButtonExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04013D2424A5A900A11E79 /* UIButtonExtension .swift */; };
 		7E040141242DD64300A11E79 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E040140242DD64300A11E79 /* VisitorTableViewController.swift */; };
 		7E040143242DD7DD00A11E79 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E040142242DD7DD00A11E79 /* VisitorView.swift */; };
 		7E27BE472490722A008D6255 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27BE4624907229008D6255 /* UserAccountViewModel.swift */; };
@@ -25,6 +25,9 @@
 		7ED92B80241B6CB200FD0C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED92B7E241B6CB200FD0C75 /* Main.storyboard */; };
 		7ED92B82241B6CB200FD0C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED92B81241B6CB200FD0C75 /* Assets.xcassets */; };
 		7ED92B85241B6CB200FD0C75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED92B83241B6CB200FD0C75 /* LaunchScreen.storyboard */; };
+		7EDB9F352499F3B6002B468C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB9F342499F3B6002B468C /* WelcomeViewController.swift */; };
+		7EDB9F372499F50F002B468C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB9F362499F50F002B468C /* UIImageViewExtension.swift */; };
+		7EDB9F392499F994002B468C /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB9F382499F994002B468C /* UILabelExtension.swift */; };
 		D7B4A35DFF07501865DD630E /* Pods_merrycodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3658195D9B59634285EFE8D3 /* Pods_merrycodes.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +39,7 @@
 		7E0401362421ABF500A11E79 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		7E0401382421AC0400A11E79 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		7E04013A2421AC1800A11E79 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		7E04013D2424A5A900A11E79 /* UiButtonExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiButtonExtension .swift"; sourceTree = "<group>"; };
+		7E04013D2424A5A900A11E79 /* UIButtonExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButtonExtension .swift"; sourceTree = "<group>"; };
 		7E040140242DD64300A11E79 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		7E040142242DD7DD00A11E79 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7E27BE4624907229008D6255 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		7ED92B81241B6CB200FD0C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED92B84241B6CB200FD0C75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ED92B86241B6CB200FD0C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EDB9F342499F3B6002B468C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7EDB9F362499F50F002B468C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		7EDB9F382499F994002B468C /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		9C27E192FB217E2467875FAE /* Pods-merrycodes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-merrycodes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-merrycodes/Pods-merrycodes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +175,9 @@
 		7E04013C2424A52800A11E79 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7E04013D2424A5A900A11E79 /* UiButtonExtension .swift */,
+				7E04013D2424A5A900A11E79 /* UIButtonExtension .swift */,
+				7EDB9F362499F50F002B468C /* UIImageViewExtension.swift */,
+				7EDB9F382499F994002B468C /* UILabelExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7E27BE4C2494E054008D6255 /* NewFeatureViewController.swift */,
+				7EDB9F342499F3B6002B468C /* WelcomeViewController.swift */,
 			);
 			path = NewFeature;
 			sourceTree = "<group>";
@@ -351,11 +360,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-merrycodes/Pods-merrycodes-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,9 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E04013B2421AC1800A11E79 /* ProfileTableViewController.swift in Sources */,
+				7EDB9F352499F3B6002B468C /* WelcomeViewController.swift in Sources */,
 				7E5ACBD7246B85FF000E9EC0 /* NetworkTools.swift in Sources */,
 				7E0401332421AB4B00A11E79 /* MainTabBarController.swift in Sources */,
-				7E04013E2424A5A900A11E79 /* UiButtonExtension .swift in Sources */,
+				7E04013E2424A5A900A11E79 /* UIButtonExtension .swift in Sources */,
 				7E5ACBDA246E8DA8000E9EC0 /* OAuthViewController.swift in Sources */,
 				7E5ACBDC248126E1000E9EC0 /* UserAccount.swift in Sources */,
 				7E040143242DD7DD00A11E79 /* VisitorView.swift in Sources */,
@@ -382,8 +394,10 @@
 				7E0401352421ABD100A11E79 /* DiscoverTableViewController.swift in Sources */,
 				7ED92B7B241B6CB200FD0C75 /* AppDelegate.swift in Sources */,
 				7E040141242DD64300A11E79 /* VisitorTableViewController.swift in Sources */,
+				7EDB9F372499F50F002B468C /* UIImageViewExtension.swift in Sources */,
 				7E0401392421AC0400A11E79 /* MessageTableViewController.swift in Sources */,
 				7E27BE4D2494E054008D6255 /* NewFeatureViewController.swift in Sources */,
+				7EDB9F392499F994002B468C /* UILabelExtension.swift in Sources */,
 				7E0401372421ABF500A11E79 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

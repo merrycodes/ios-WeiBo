@@ -4,6 +4,11 @@ class UserAccountViewModel {
     
     var account:UserAccount?
     
+    var avatarUrl:NSURL {
+        return NSURL(string: account?.avatar_large ?? "")!
+    }
+    
+    
     public var accountPath:String {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
         return (path as NSString).strings(byAppendingPaths: ["account.plist"]).last!

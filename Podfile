@@ -6,6 +6,7 @@ target 'merrycodes' do
   use_frameworks!
   pod 'AFNetworking','~>3.1.0'
   pod 'SnapKit', '~> 3.0.0'
+  pod 'SDWebImage', '~> 4.0.0'
   # Pods for merrycodes
 
 end
